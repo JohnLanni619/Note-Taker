@@ -1,49 +1,19 @@
 {
   "notes": [
     {
-      "id": "0",
-      "title": "Test Title",
-      "text": "Test text"
-    },
-    {
       "title": "Finish Project",
       "text": "Finish this project TONIGHT",
       "id": "1"
     },
     {
-      "title": "Finish Project",
-      "text": "Finish this project TONIGHT",
+      "title": "Example 1",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat venenatis tincidunt. Quisque a magna ut lacus interdum dictum. Fusce elementum scelerisque placerat. Nullam mattis fringilla mattis. Sed feugiat accumsan lorem sed tristique. Suspendisse nunc tortor, cursus et ultricies sed, ornare a eros. Etiam nibh nulla, lobortis eu bibendum molestie, rhoncus varius tortor.",
+      "id": "1"
+    },
+    {
+      "title": "Example 2",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id scelerisque lectus, a consectetur lorem. Duis mi felis, eleifend id tincidunt eu, pharetra et libero. Vestibulum ut volutpat nisi, eget semper elit. Maecenas quis turpis dignissim, placerat turpis a, laoreet mauris. Integer luctus sapien eu purus aliquam, nec maximus augue pretium. Suspendisse varius sollicitudin ex eget gravida. Integer porta, nibh in lobortis fringilla, felis turpis ornare mauris, at imperdiet metus felis in tellus. Aenean eu dui sollicitudin, congue odio eu, ultricies ex. Sed efficitur, ante ut euismod imperdiet, velit turpis ornare lectus, vel vestibulum lacus neque faucibus ligula. Suspendisse potenti.",
       "id": "2"
-    },
-    {
-      "title": "Finish Project",
-      "text": "Finish this project TONIGHT",
-      "id": "3"
-    },
-    {
-      "title": "Finish Project",
-      "text": "Finish this project TONIGHT",
-      "id": "4"
-    },
-    {
-      "title": "Finish Project",
-      "text": "Finish this project TONIGHT",
-      "id": "5"
-    },
-    {
-      "title": "Finish Project",
-      "text": "Finish this project TONIGHT",
-      "id": "6"
-    },
-    {
-      "title": "hi",
-      "text": "hi",
-      "id": "7"
-    },
-    {
-      "title": "Finish Project",
-      "text": "Finish this project TONIGHT",
-      "id": "8"
     }
   ]
 }

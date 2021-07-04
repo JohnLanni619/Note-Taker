@@ -3,6 +3,8 @@ const path = require('path');
 const express = require('express');
 const {notes} = require('./db/notes.json');
 
+console.log(notes);
+
 const PORT = process.env.PORT || 3001;
 const app = express();
 
@@ -10,12 +12,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
-function createNewNote(body, notesArray) {
+function createNewNote(body, notes) {
     const note = body;
-    notesArray.push(note);
+    notes.push(note);
     fs.writeFileSync(
         path.join(__dirname, './db/notes.json'),
-        JSON.stringify({ notes: notesArray }, null, 2)
+        JSON.stringify({ notes: notes }, null, 2)
     );
     return note;
 }
@@ -28,6 +30,11 @@ function validateNote(note) {
         return false;
     }
     return true;
+}
+
+function findById(id, notes) {
+    const result = notes.filter(note => note.id === id)[0];
+    return result;
 }
 
 app.get('/api/notes', (req, res) => {
@@ -52,6 +59,20 @@ app.get('/', (req, res) => {
 
 app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/notes.html'));
+});
+
+app.delete('/api/notes/:id', (req, res) => {
+    const result = findById(req.params.id, notes);
+    if (result) {
+        notes.splice(req.params.id, 1);
+        console.log(req.params.id);
+        fs.writeFileSync(
+            path.join(__dirname, './db/notes.json'),
+            JSON.stringify({ notes: notes }, null, 2)
+        );
+    } else {
+        res.send(404);
+    }
 });
 
 app.listen(PORT, () => {
