@@ -26,7 +26,7 @@ const hide = (elem) => {
 let activeNote = {};
 
 const getNotes = () =>
-  fetch('/api/notes', {
+  fetch('http://localhost:3001/api/notes', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
